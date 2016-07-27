@@ -1,0 +1,67 @@
+# ESLint
+# http://eslint.org/
+
+env:
+  browser : true
+  node    : true
+  commonjs: true
+  es6     : true
+  mocha   : true
+
+extends: eslint:recommended
+
+parserOptions:
+  ecmaVersion: 6
+  sourceType : module
+
+rules:
+  # Possible Errors
+  no-extra-semi                 : warn
+  # valid-jsdoc                   : [error, { requireParamDescription: false, requireReturn: false, requireReturnDescription: false, requireReturnType: true, preferType: { Boolean: boolean, Number: number, object: Object, String: string } }]
+
+  # Best Practices
+  # consistent-return             : off
+  # dot-location                  : [error, property]
+  # no-implicit-coercion          : [error, { boolean: true, number: true, string: true, allow: [ !!, '+' ] }]
+  # no-magic-numbers              : off # [1, { 'ignoreArrayIndexes': true }]
+  # no-new                        : off
+
+  # Strict Mode
+
+  # Variables
+  # init-declarations             : [error, 'always']
+  # no-undefined                  : off
+
+  # Node.js and CommonJS
+  # global-require                : off
+
+  # Stylistic Issues
+  # camelcase                     : [error, {properties: 'never'}]
+  comma-spacing                 : [error, { before: false, after: true }]
+  # id-length                     : off # use 1 length
+  indent                        : [error, 2, { VariableDeclarator: 2, SwitchCase: 1 }]
+  key-spacing                   : [error, { beforeColon: false, afterColon: true }]
+  # lines-around-comment          : [error, { 'beforeBlockComment': true, 'afterBlockComment': false, 'beforeLineComment': false, 'afterLineComment': false, 'allowBlockStart': true, 'allowBlockEnd': false, 'allowObjectStart': false, 'allowObjectEnd': false, 'allowArrayStart': false, 'allowArrayEnd': false }]
+  # max-lines                     : warn
+  # max-len                       : [error, {'code': 256, 'tabWidth': 2, 'ignoreUrls': true}]
+  # max-params                    : off
+  # max-statements                : off
+  # newline-after-var             : off
+  # newline-per-chained-call      : off
+  # no-plusplus                   : [error, { 'allowForLoopAfterthoughts': true }]
+  # no-ternary                    : off
+  # no-underscore-dangle          : off # use private variable
+  object-curly-spacing          : [error, always]
+  # one-var                       : [error, never]
+  # padded-blocks                 : [error, never]
+  # quote-props                   : [error, as-needed, { keywords: true, unnecessary: false }]
+  # quotes                        : [error, single, avoid-escape]
+  # sort-imports                  : off
+  # space-before-function-paren   : [error, never]
+  space-infix-ops               : error
+  # spaced-comment                : off
+
+  # ECMAScript 6
+  # arrow-body-style              : [error, always]
+  # arrow-parens                  : off # use async/await
+  # prefer-reflect                : off
