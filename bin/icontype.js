@@ -4,6 +4,7 @@
 const minimist = require("minimist");
 const pkg = require("../package.json");
 const icontype = require("../lib");
+const lookupFiles = require("../lib/util/lookupFiles");
 
 const argv = minimist(process.argv.slice(2), {
   boolean: [
@@ -21,7 +22,7 @@ const argv = minimist(process.argv.slice(2), {
 });
 
 function main() {
-  icontype(argv._);
+  icontype(lookupFiles(argv._));
 }
 
 function showHelp() {
