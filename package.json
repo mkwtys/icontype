@@ -40,6 +40,6 @@
   },
   "scripts": {
     "cover": "npm t && nyc report --reporter=lcov --reporter=text",
-    "test": "nyc -s mocha --require intelli-espower-loader"
+    "test": "nyc -s mocha 'test/**/*.js' --require intelli-espower-loader"
   }
 }

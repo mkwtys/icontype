@@ -1,3 +1,5 @@
 const generator = require('../lib/generator');
 
-it('generator');
+describe('generator', function() {
+  it('');
+});
