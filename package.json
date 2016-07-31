@@ -40,7 +40,7 @@
     "url": "git+https://github.com/mkwtys/icontype.git"
   },
   "scripts": {
-    "cover": "nyc --reporter=lcov --reporter=text npm t",
-    "test": "mocha 'test/**/*.js' --require intelli-espower-loader"
+    "cover": "npm t && nyc report --reporter=lcov --reporter=text",
+    "test": "nyc -s mocha --timeout 10000 --require intelli-espower-loader"
   }
 }
