@@ -12,6 +12,7 @@
   "dependencies": {
     "glob": "7.0.5",
     "minimist": "1.2.0",
+    "mkdirp": "0.5.1",
     "svg2ttf": "4.0.1",
     "svgicons2svgfont": "5.0.0",
     "ttf2eot": "2.0.0",
