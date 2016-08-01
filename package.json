@@ -20,7 +20,6 @@
     "ttf2woff2": "2.0.3"
   },
   "devDependencies": {
-    "codecov": "1.0.1",
     "intelli-espower-loader": "1.0.1",
     "mocha": "2.5.3",
     "nyc": "7.1.0",
