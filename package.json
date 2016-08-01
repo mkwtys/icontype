@@ -28,6 +28,10 @@
   "directories": {
     "test": "test"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "homepage": "https://github.com/mkwtys/icontype#readme",
   "keywords": [
     "generator",
