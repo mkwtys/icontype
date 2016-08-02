@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/mkwtys/icontype.svg?branch=master)](https://travis-ci.org/mkwtys/icontype)
+[![codecov](https://codecov.io/gh/mkwtys/icontype/branch/master/graph/badge.svg)](https://codecov.io/gh/mkwtys/icontype)
+
 # icontype
 
 iconfont generator
