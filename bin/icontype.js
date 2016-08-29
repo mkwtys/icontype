@@ -1,23 +1,23 @@
 #! /usr/bin/env node
 'use strict';
 
-const minimist = require("minimist");
-const pkg = require("../package.json");
-const icontype = require("../lib");
-const glob = require("glob-all");
+const minimist = require('minimist');
+const pkg = require('../package.json');
+const icontype = require('../lib');
+const glob = require('glob-all');
 
 const argv = minimist(process.argv.slice(2), {
   boolean: [
-    "help",
-    "version"
+    'help',
+    'version'
   ],
   alias: {
-    "h": "help",
-    "v": "version"
+    'h': 'help',
+    'v': 'version'
   },
   default: {
-    "help": false,
-    "version": false
+    'help': false,
+    'version': false
   }
 });
 
