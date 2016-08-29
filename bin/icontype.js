@@ -1,10 +1,9 @@
 #! /usr/bin/env node
 'use strict';
-
-const minimist = require('minimist');
-const pkg = require('../package.json');
 const icontype = require('../lib');
 const glob = require('glob-all');
+const minimist = require('minimist');
+const pkg = require('../package.json');
 
 const argv = minimist(process.argv.slice(2), {
   boolean: [
