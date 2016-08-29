@@ -12,12 +12,12 @@ const argv = minimist(process.argv.slice(2), {
     'version'
   ],
   alias: {
-    'h': 'help',
-    'v': 'version'
+    h: 'help',
+    v: 'version'
   },
   default: {
-    'help': false,
-    'version': false
+    help: false,
+    version: false
   }
 });
 
