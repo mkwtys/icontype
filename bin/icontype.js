@@ -10,18 +10,25 @@ const argv = minimist(process.argv.slice(2), {
     'help',
     'version'
   ],
+  string: [
+    'fontname'
+  ],
   alias: {
+    f: 'fontname',
     h: 'help',
     v: 'version'
   },
   default: {
+    fontname: 'icontype',
     help: false,
     version: false
   }
 });
 
 function main() {
-  icontype(glob.sync(argv._));
+  icontype(glob.sync(argv._), {
+    fontName: argv.f
+  });
 }
 
 function showHelp() {
@@ -32,8 +39,9 @@ Usage
   ${Object.keys(pkg.bin)[0]} [input files] [options]
 
 Options
-  -h, --help       show help
-  -v, --version    print version
+  -f, --fontname    set font family name [icontype]
+  -h, --help        show help
+  -v, --version     print version
 `
   );
 }
