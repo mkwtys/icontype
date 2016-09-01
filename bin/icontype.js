@@ -11,23 +11,27 @@ const argv = minimist(process.argv.slice(2), {
     'version'
   ],
   string: [
-    'fontname'
+    'fontname',
+    'out-dir'
   ],
   alias: {
     f: 'fontname',
     h: 'help',
+    o: 'out-dir',
     v: 'version'
   },
   default: {
     fontname: 'icontype',
     help: false,
+    'out-dir': './',
     version: false
   }
 });
 
 function main() {
   icontype(glob.sync(argv._), {
-    fontName: argv.f
+    fontName: argv.f,
+    outDir: argv.o
   });
 }
 
@@ -36,11 +40,12 @@ function showHelp() {
 ${pkg.description}
 
 Usage
-  ${Object.keys(pkg.bin)[0]} [input files] [options]
+  ${Object.keys(pkg.bin)[0]} <svg files> [options]
 
 Options
-  -f, --fontname    set font family name [icontype]
+  -f, --fontname    font family name [icontype]
   -h, --help        show help
+  -o, --out-dir     output directory
   -v, --version     print version
 `
   );
