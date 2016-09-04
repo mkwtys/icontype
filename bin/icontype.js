@@ -10,6 +10,9 @@ const argv = minimist(process.argv.slice(2), {
     'help',
     'version'
   ],
+  number: [
+    'start-unicode'
+  ],
   string: [
     'fontname',
     'out-dir'
@@ -18,12 +21,14 @@ const argv = minimist(process.argv.slice(2), {
     f: 'fontname',
     h: 'help',
     o: 'out-dir',
+    s: 'start-unicode',
     v: 'version'
   },
   default: {
     fontname: 'icontype',
     help: false,
     'out-dir': './',
+    'start-unicode': 0xEA01,
     version: false
   }
 });
@@ -31,7 +36,8 @@ const argv = minimist(process.argv.slice(2), {
 function main() {
   icontype(glob.sync(argv._), {
     fontName: argv.f,
-    outDir: argv.o
+    outDir: argv.o,
+    startUnicode: argv.s
   });
 }
 
@@ -43,10 +49,11 @@ Usage
   ${Object.keys(pkg.bin)[0]} <svg files> [options]
 
 Options
-  -f, --fontname    font family name [icontype]
-  -h, --help        show help
-  -o, --out-dir     output directory
-  -v, --version     print version
+  -f, --fontname         font family name [icontype]
+  -h, --help             show help
+  -o, --out-dir          output directory
+  -s, --start-unicode    start unicode codepoint [0xEA01]
+  -v, --version          print version
 `
   );
 }
