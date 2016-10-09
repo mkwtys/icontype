@@ -10,18 +10,35 @@ const argv = minimist(process.argv.slice(2), {
     'help',
     'version'
   ],
+  number: [
+    'start-unicode'
+  ],
+  string: [
+    'fontname',
+    'out-dir'
+  ],
   alias: {
+    f: 'fontname',
     h: 'help',
+    o: 'out-dir',
+    s: 'start-unicode',
     v: 'version'
   },
   default: {
+    fontname: 'icontype',
     help: false,
+    'out-dir': './',
+    'start-unicode': 0xEA01,
     version: false
   }
 });
 
 function main() {
-  icontype(glob.sync(argv._));
+  icontype(glob.sync(argv._), {
+    fontName: argv.f,
+    outDir: argv.o,
+    startUnicode: argv.s
+  });
 }
 
 function showHelp() {
@@ -29,11 +46,14 @@ function showHelp() {
 ${pkg.description}
 
 Usage
-  ${Object.keys(pkg.bin)[0]} [input files] [options]
+  ${Object.keys(pkg.bin)[0]} <svg files> [options]
 
 Options
-  -h, --help       show help
-  -v, --version    print version
+  -f, --fontname         font family name [icontype]
+  -h, --help             show help
+  -o, --out-dir          output directory
+  -s, --start-unicode    start unicode codepoint [0xEA01]
+  -v, --version          print version
 `
   );
 }

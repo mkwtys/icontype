@@ -20,17 +20,19 @@ $ icontype --help
 iconfont generator
 
 Usage
-  icontype [files] [options]
+  icontype <svg files> [options]
 
 Options
-  -h, --help       show help
-  -v, --version    print version
+  -f, --fontname    font family name [icontype]
+  -h, --help        show help
+  -o, --out-dir     output directory
+  -v, --version     print version
 ```
 
 #### Example:
 
 ```sh
-icontype <files>
+icontype <svg files>
 ```
 
 ## License
