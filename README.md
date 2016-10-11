@@ -23,10 +23,11 @@ Usage
   icontype <svg files> [options]
 
 Options
-  -f, --fontname    font family name [icontype]
-  -h, --help        show help
-  -o, --out-dir     output directory
-  -v, --version     print version
+  -f, --fontname         font family name [icontype]
+  -h, --help             show help
+  -o, --out-dir          output directory
+  -s, --start-unicode    start unicode codepoint [0xEA01]
+  -v, --version          print version
 ```
 
 #### Example:
