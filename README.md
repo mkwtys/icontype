@@ -38,3 +38,10 @@ icontype <svg files>
 ## License
 
 MIT © [mkwtys](https://github.com/mkwtys)
+
+
+> [octicons](https://github.com/primer/octicons/) svg used in test.  
+> https://github.com/primer/octicons/#license
+>
+> _SVG License:_ [SIL OFL 1.1](http://scripts.sil.org/OFL)  
+> Applies to all SVG files
