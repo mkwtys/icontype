@@ -1,3 +1,20 @@
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/mkwtys/icontype/compare/v0.0.4...v0.1.0) (2016-10-11)
+
+
+### Features
+
+* **cli:** --out-dir option ([bc34161](https://github.com/mkwtys/icontype/commit/bc34161))
+* **cli:** fontname option ([58bfc28](https://github.com/mkwtys/icontype/commit/58bfc28))
+* **cli:** start unicode code point ([a05ab3c](https://github.com/mkwtys/icontype/commit/a05ab3c))
+
+
+
+<a name="0.0.4"></a>
+## [0.0.4](https://github.com/mkwtys/icontype/compare/v0.0.3...v0.0.4) (2016-08-29)
+
+
+
 <a name="0.0.3"></a>
 ## [0.0.3](https://github.com/mkwtys/icontype/compare/v0.0.2...v0.0.3) (2016-08-02)
 
