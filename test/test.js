@@ -4,6 +4,7 @@ const del = require('del');
 const fs = require('fs');
 const glob = require('glob-all');
 const icontype = require('../lib/');
+const template = require('../lib/template');
 
 describe('generator', function() {
   const DEST = './test/dist/';
@@ -29,6 +30,24 @@ describe('generator', function() {
         const filepath = DEST + filename;
         assert(fs.statSync(filepath).isFile());
       });
+    });
+  });
+
+  it('template', function() {
+    template('./template/icontype.css.js', {
+      fontName: 'fontName',
+      fontPath: '../fonts/'
+    }, (err, value) => {
+      assert(value === `@font-face {
+  font-family: 'fontName';
+  src: url('../fonts/fontName.eot');
+  src: url('../fonts/fontName.eot?#iefix') format('eot'),
+    url('../fonts/fontName.woff2') format('woff2'),
+    url('../fonts/fontName.woff') format('woff'),
+    url('../fonts/fontName.ttf') format('truetype'),
+    url('../fonts/fontName.svg#fontName') format('svg');
+}
+`);
     });
   });
 });
