@@ -1,68 +1,54 @@
 'use strict';
 const assert = require('power-assert');
-const del = require('del');
 const fs = require('fs');
 const glob = require('glob-all');
 const icontype = require('../lib/');
-const template = require('../lib/template');
 
 describe('generator', function() {
+  const CLASS_NAME = 'className';
   const DEST = './test/dist/';
   const FONT_NAME = 'fontName';
+  const FONT_PATH = '../fonts/';
+  const START_UNICODE = 0xEA01;
+  const TEMPLATE = './template/icontype.css.js';
   const TYPES = ['eot', 'woff', 'woff2', 'ttf', 'svg'];
 
-  afterEach(function() {
-    del(DEST + '*');
-  });
-
-  it('generates all fonts', function() {
+  it('generate all fonts', function() {
     const OPTIONS = {
       fontName: FONT_NAME,
       outDir: DEST,
-      startUnicode: 0xEA01,
+      startUnicode: START_UNICODE,
       types: TYPES,
       log: () => {}
     };
 
-    return icontype(glob.sync('./test/svg/*'), OPTIONS).then(function() {
-      TYPES.forEach(function(type) {
-        const filename = FONT_NAME + '.' + type;
-        const filepath = DEST + filename;
-        assert(fs.statSync(filepath).isFile());
+    return icontype(glob.sync('./test/svg/*'), OPTIONS)
+      .then(() => {
+        TYPES.forEach((type) => {
+          const filename = FONT_NAME + '.' + type;
+          const filepath = DEST + filename;
+          assert(fs.statSync(filepath).isFile());
+        });
       });
-    });
   });
 
-  it('template', function() {
-    return template('./template/icontype.css.js', {
-      className: 'className',
-      fontName: 'fontName',
-      fontPath: '../fonts/',
-      template: './template/icontype.css.js',
+  it('generate template file', function() {
+    const OPTIONS = {
+      fontName: FONT_NAME,
+      outDir: DEST,
+      startUnicode: START_UNICODE,
+      types: TYPES,
+      className: CLASS_NAME,
+      fontPath: FONT_PATH,
+      template: TEMPLATE,
       templateDest: DEST,
-      glyphs: [
-        {
-          name: 'glyph-name',
-          code: 0xEA01
-        }
-      ]
-    }).then((value) => {
-      const expected = `@font-face {
-  font-family: 'fontName';
-  src: url('../fonts/fontName.eot');
-  src: url('../fonts/fontName.eot?#iefix') format('eot'),
-    url('../fonts/fontName.woff2') format('woff2'),
-    url('../fonts/fontName.woff') format('woff'),
-    url('../fonts/fontName.ttf') format('truetype'),
-    url('../fonts/fontName.svg#fontName') format('svg');
-}
+      log: () => {}
+    };
 
-.className-glyph-name {
-  content: '\\EA01';
-}
-
-`;
-      assert(value === expected);
-    });
+    return icontype(glob.sync('./test/svg/*'), OPTIONS)
+      .then((value) => {
+        const expected = fs.readFileSync('./test/expected/icontype.css', 'utf8');
+        assert(value === expected);
+      });
   });
 });

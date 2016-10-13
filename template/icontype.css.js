@@ -9,8 +9,22 @@
 }
 
 ${glyphs.map((glyph) => {
-  return `.${className}-${glyph.name} {
+  return `.${className}-${glyph.name}:before`
+}).join(',\n')}
+{
+  font-family: '${fontName}';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+${glyphs.map((glyph) => {
+  return `.${className}-${glyph.name}:before {
   content: '\\${glyph.code.toString(16).toUpperCase()}';
 }
 `;
-})}
+}).join('')}

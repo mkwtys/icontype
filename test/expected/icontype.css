@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'fontName';
+  src: url('../fonts/fontName.eot');
+  src: url('../fonts/fontName.eot?#iefix') format('eot'),
+    url('../fonts/fontName.woff2') format('woff2'),
+    url('../fonts/fontName.woff') format('woff'),
+    url('../fonts/fontName.ttf') format('truetype'),
+    url('../fonts/fontName.svg#fontName') format('svg');
+}
+
+.className-arrow-down:before,
+.className-arrow-left:before,
+.className-arrow-right:before,
+.className-arrow-up:before,
+.className-mark-github:before,
+.className-arrow-down:before,
+.className-arrow-left:before,
+.className-arrow-right:before,
+.className-arrow-up:before,
+.className-mark-github:before
+{
+  font-family: 'fontName';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.className-arrow-down:before {
+  content: '\EA01';
+}
+.className-arrow-left:before {
+  content: '\EA02';
+}
+.className-arrow-right:before {
+  content: '\EA03';
+}
+.className-arrow-up:before {
+  content: '\EA04';
+}
+.className-mark-github:before {
+  content: '\EA05';
+}
+.className-arrow-down:before {
+  content: '\EA06';
+}
+.className-arrow-left:before {
+  content: '\EA07';
+}
+.className-arrow-right:before {
+  content: '\EA08';
+}
+.className-arrow-up:before {
+  content: '\EA09';
+}
+.className-mark-github:before {
+  content: '\EA0A';
+}
+
