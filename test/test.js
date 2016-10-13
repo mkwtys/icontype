@@ -46,9 +46,9 @@ describe('generator', function() {
     };
 
     return icontype(glob.sync('./test/svg/*'), OPTIONS)
-      .then((value) => {
+      .then((values) => {
         const expected = fs.readFileSync('./test/expected/icontype.css', 'utf8');
-        assert(value === expected);
+        assert(values[0] === expected);
       });
   });
 });
