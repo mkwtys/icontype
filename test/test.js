@@ -13,15 +13,19 @@ describe('generator', function() {
   const TEMPLATE = './template/icontype.css.js';
   const TYPES = ['eot', 'woff', 'woff2', 'ttf', 'svg'];
 
-  it('generate all fonts', function() {
-    const OPTIONS = {
-      fontName: FONT_NAME,
-      outDir: DEST,
-      startUnicode: START_UNICODE,
-      types: TYPES,
-      log: () => {}
-    };
+  const OPTIONS = {
+    fontName: FONT_NAME,
+    outDir: DEST,
+    startUnicode: START_UNICODE,
+    types: TYPES,
+    className: CLASS_NAME,
+    fontPath: FONT_PATH,
+    template: TEMPLATE,
+    templateDest: DEST,
+    log: () => {}
+  };
 
+  it('generate all fonts', function() {
     return icontype(glob.sync('./test/svg/*'), OPTIONS)
       .then(() => {
         TYPES.forEach((type) => {
@@ -33,18 +37,6 @@ describe('generator', function() {
   });
 
   it('generate template file', function() {
-    const OPTIONS = {
-      fontName: FONT_NAME,
-      outDir: DEST,
-      startUnicode: START_UNICODE,
-      types: TYPES,
-      className: CLASS_NAME,
-      fontPath: FONT_PATH,
-      template: TEMPLATE,
-      templateDest: DEST,
-      log: () => {}
-    };
-
     return icontype(glob.sync('./test/svg/*'), OPTIONS)
       .then((values) => {
         const expected = fs.readFileSync('./test/expected/icontype.css', 'utf8');
