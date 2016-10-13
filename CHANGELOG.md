@@ -1,3 +1,20 @@
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/mkwtys/icontype/compare/v0.1.0...v0.2.0) (2016-10-13)
+
+
+### Bug Fixes
+
+* **generator:** fix mkdirp ([d395c5c](https://github.com/mkwtys/icontype/commit/d395c5c))
+
+
+### Features
+
+* **template:** cli options, test ([f811fc7](https://github.com/mkwtys/icontype/commit/f811fc7))
+* **template:** minimal impl ([c9dd9d5](https://github.com/mkwtys/icontype/commit/c9dd9d5))
+* **template:** multiple files ([faf7431](https://github.com/mkwtys/icontype/commit/faf7431))
+
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/mkwtys/icontype/compare/v0.0.4...v0.1.0) (2016-10-11)
 
