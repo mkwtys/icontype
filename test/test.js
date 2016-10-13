@@ -39,7 +39,7 @@ describe('generator', function() {
       fontName: 'fontName',
       fontPath: '../fonts/',
       template: './template/icontype.css.js',
-      templateDest: './tmp/',
+      templateDest: DEST,
       glyphs: [
         {
           name: 'glyph-name',
