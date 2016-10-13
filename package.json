@@ -20,11 +20,11 @@
     "ttf2woff2": "2.0.3"
   },
   "devDependencies": {
-    "del": "2.2.2",
     "intelli-espower-loader": "1.0.1",
     "mocha": "3.1.2",
     "nyc": "8.3.1",
-    "power-assert": "1.4.1"
+    "power-assert": "1.4.1",
+    "rimraf": "2.5.4"
   },
   "directories": {
     "test": "test"
@@ -46,6 +46,7 @@
   },
   "scripts": {
     "cover": "npm t && nyc report --reporter=lcov --reporter=text",
-    "test": "nyc -s mocha 'test/**/*.js' --timeout 10000 --require intelli-espower-loader"
+    "clean": "rimraf test/dist",
+    "test": "npm run clean && nyc -s mocha 'test/**/*.js' --timeout 10000 --require intelli-espower-loader"
   }
 }
