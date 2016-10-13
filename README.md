@@ -23,10 +23,14 @@ Usage
   icontype <svg files> [options]
 
 Options
-  -f, --fontname         font family name [icontype]
+  -c, --class-name       base class name for css      [default: icontype]
+  -f, --font-name        font family name             [default: icontype]
+  -p, --font-path        font path for css
   -h, --help             show help
   -o, --out-dir          output directory
-  -s, --start-unicode    start unicode codepoint [0xEA01]
+  -s, --start-unicode    start unicode codepoint      [default: 0xEA01]
+      --template         template file path
+      --template-dest    template output directory
   -v, --version          print version
 ```
 
