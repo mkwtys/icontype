@@ -7,3 +7,10 @@
     url('${fontPath}${fontName}.ttf') format('truetype'),
     url('${fontPath}${fontName}.svg#${fontName}') format('svg');
 }
+
+${glyphs.map((glyph) => {
+  return `.${className}-${glyph.name} {
+  content: '\\${glyph.codepoint.toString(16).toUpperCase()}';
+}
+`;
+})}

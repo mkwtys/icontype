@@ -35,10 +35,17 @@ describe('generator', function() {
 
   it('template', function() {
     template('./template/icontype.css.js', {
+      className: 'className',
       fontName: 'fontName',
-      fontPath: '../fonts/'
+      fontPath: '../fonts/',
+      glyphs: [
+        {
+          name: 'glyph-name',
+          codepoint: 0xEA01
+        }
+      ]
     }, (err, value) => {
-      assert(value === `@font-face {
+      const expected = `@font-face {
   font-family: 'fontName';
   src: url('../fonts/fontName.eot');
   src: url('../fonts/fontName.eot?#iefix') format('eot'),
@@ -47,7 +54,13 @@ describe('generator', function() {
     url('../fonts/fontName.ttf') format('truetype'),
     url('../fonts/fontName.svg#fontName') format('svg');
 }
-`);
+
+.className-glyph-name {
+  content: '\\EA01';
+}
+
+`;
+      assert(value === expected);
     });
   });
 });
