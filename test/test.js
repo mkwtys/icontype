@@ -34,17 +34,19 @@ describe('generator', function() {
   });
 
   it('template', function() {
-    template('./template/icontype.css.js', {
+    return template('./template/icontype.css.js', {
       className: 'className',
       fontName: 'fontName',
       fontPath: '../fonts/',
+      template: './template/icontype.css.js',
+      templateDest: './tmp/',
       glyphs: [
         {
           name: 'glyph-name',
-          codepoint: 0xEA01
+          code: 0xEA01
         }
       ]
-    }, (err, value) => {
+    }).then((value) => {
       const expected = `@font-face {
   font-family: 'fontName';
   src: url('../fonts/fontName.eot');

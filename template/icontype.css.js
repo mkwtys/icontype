@@ -10,7 +10,7 @@
 
 ${glyphs.map((glyph) => {
   return `.${className}-${glyph.name} {
-  content: '\\${glyph.codepoint.toString(16).toUpperCase()}';
+  content: '\\${glyph.code.toString(16).toUpperCase()}';
 }
 `;
 })}

@@ -14,18 +14,26 @@ const argv = minimist(process.argv.slice(2), {
     'start-unicode'
   ],
   string: [
-    'fontname',
-    'out-dir'
+    'class-name',
+    'font-name',
+    'font-path',
+    'out-dir',
+    'template-dest',
+    'template'
   ],
   alias: {
-    f: 'fontname',
+    c: 'class-name',
+    f: 'font-name',
     h: 'help',
     o: 'out-dir',
+    p: 'font-path',
     s: 'start-unicode',
     v: 'version'
   },
   default: {
-    fontname: 'icontype',
+    'class-name': 'icontype',
+    'font-name': 'icontype',
+    'font-path': './',
     help: false,
     'out-dir': './',
     'start-unicode': 0xEA01,
@@ -35,9 +43,13 @@ const argv = minimist(process.argv.slice(2), {
 
 function main() {
   icontype(glob.sync(argv._), {
+    className: argv.c,
     fontName: argv.f,
+    fontPath: argv.p,
     outDir: argv.o,
-    startUnicode: argv.s
+    startUnicode: argv.s,
+    template: argv.template,
+    templateDest: argv['template-dest']
   });
 }
 
@@ -49,10 +61,14 @@ Usage
   ${Object.keys(pkg.bin)[0]} <svg files> [options]
 
 Options
-  -f, --fontname         font family name [icontype]
+  -c, --class-name       base class name for css      [default: icontype]
+  -f, --font-name        font family name             [default: icontype]
+  -p, --font-path        font path for css
   -h, --help             show help
   -o, --out-dir          output directory
-  -s, --start-unicode    start unicode codepoint [0xEA01]
+  -s, --start-unicode    start unicode codepoint      [default: 0xEA01]
+      --template         template file path
+      --template-dest    template output directory
   -v, --version          print version
 `
   );
