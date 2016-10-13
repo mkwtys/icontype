@@ -35,18 +35,23 @@
   ],
   "homepage": "https://github.com/mkwtys/icontype#readme",
   "keywords": [
+    "eot",
     "generator",
-    "iconfont"
+    "iconfont",
+    "svg",
+    "ttf",
+    "woff",
+    "woff2"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mkwtys/icontype.git"
   },
   "scripts": {
-    "cover": "npm t && nyc report --reporter=lcov --reporter=text",
     "clean": "rimraf test/dist",
+    "cover": "npm t && nyc report --reporter=lcov --reporter=text",
     "test": "npm run clean && nyc -s mocha 'test/**/*.js' --timeout 10000 --require intelli-espower-loader"
   }
 }
