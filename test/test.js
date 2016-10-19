@@ -10,7 +10,7 @@ describe('generator', function() {
   const FONT_NAME = 'fontName';
   const FONT_PATH = '../fonts/';
   const START_UNICODE = 0xEA01;
-  const TEMPLATE = './template/icontype.css.js';
+  const TEMPLATE = './template/icontype.css';
   const TYPES = ['eot', 'woff', 'woff2', 'ttf', 'svg'];
 
   const OPTIONS = {
