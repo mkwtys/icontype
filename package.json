@@ -1,7 +1,7 @@
 {
   "name": "icontype",
   "description": "iconfont generator",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "mkwtys <mkwtys@gmail.com>",
   "bin": {
     "icontype": "bin/icontype.js"
