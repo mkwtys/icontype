@@ -38,9 +38,10 @@ describe('generator', function() {
 
   it('generate template file', function() {
     return icontype(glob.sync('./test/svg/*'), OPTIONS)
-      .then((values) => {
+      .then(() => {
+        const actual = fs.readFileSync('./test/dist/icontype.css', 'utf8');
         const expected = fs.readFileSync('./test/expected/icontype.css', 'utf8');
-        assert(values[0] === expected);
+        assert(actual === expected);
       });
   });
 });
