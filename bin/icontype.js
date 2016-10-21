@@ -67,7 +67,7 @@ Options
   -h, --help             show help
   -o, --out-dir          output directory
   -s, --start-unicode    start unicode codepoint      [default: 0xEA01]
-      --template         template file path
+      --template         template source (glob)
       --template-dest    template output directory
   -v, --version          print version
 `
