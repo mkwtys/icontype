@@ -44,9 +44,8 @@ icontype <svg files>
 
 MIT © [mkwtys](https://github.com/mkwtys)
 
-
-> [octicons](https://github.com/primer/octicons/) svg used in test.  
-> https://github.com/primer/octicons/#license
+> octicons svg used in test.
 >
+> [octicons](https://github.com/primer/octicons/)  
 > _SVG License:_ [SIL OFL 1.1](http://scripts.sil.org/OFL)  
 > Applies to all SVG files
