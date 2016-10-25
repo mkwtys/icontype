@@ -19,7 +19,9 @@ const argv = minimist(process.argv.slice(2), {
     'font-path',
     'out-dir',
     'template-dest',
-    'template'
+    'template',
+    'normalize',
+    'height'
   ],
   alias: {
     c: 'class-name',
