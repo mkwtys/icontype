@@ -22,6 +22,8 @@ describe('generator', function() {
     fontPath: FONT_PATH,
     template: TEMPLATE,
     templateDest: DEST,
+    normalize: true,
+    height: 500,
     log: () => {}
   };
 
