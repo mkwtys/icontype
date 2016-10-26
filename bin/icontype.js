@@ -19,7 +19,9 @@ const argv = minimist(process.argv.slice(2), {
     'font-path',
     'out-dir',
     'template-dest',
-    'template'
+    'template',
+    'normalize',
+    'height'
   ],
   alias: {
     c: 'class-name',
@@ -64,7 +66,9 @@ Options
   -c, --class-name       base class name for css      [default: icontype]
   -f, --font-name        font family name             [default: icontype]
   -p, --font-path        font path for css
+      --height           height option for 'svgicons2svgfont'
   -h, --help             show help
+      --normalize        normalize option for 'svgicons2svgfont'
   -o, --out-dir          output directory
   -s, --start-unicode    start unicode codepoint      [default: 0xEA01]
       --template         template source (glob)
