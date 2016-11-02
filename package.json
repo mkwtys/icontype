@@ -36,13 +36,13 @@
   ],
   "homepage": "https://github.com/mkwtys/icontype#readme",
   "keywords": [
-    "eot",
-    "generator",
     "iconfont",
+    "generator",
     "svg",
     "ttf",
     "woff",
-    "woff2"
+    "woff2",
+    "eot"
   ],
   "license": "MIT",
   "main": "lib/index.js",
