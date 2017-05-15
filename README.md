@@ -3,6 +3,8 @@
 
 # icontype
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mkwtys/icontype.svg)](https://greenkeeper.io/)
+
 iconfont generator
 
 ## Installation
