@@ -9,6 +9,9 @@
   "bugs": {
     "url": "https://github.com/mkwtys/icontype/issues"
   },
+  "engines": {
+    "node": ">=6"
+  },
   "dependencies": {
     "backtick": "0.3.2",
     "glob-all": "3.1.0",
