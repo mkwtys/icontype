@@ -24,6 +24,7 @@ describe('generator', function() {
     templateDest: DEST,
     normalize: true,
     height: 500,
+    centerHorizontally: true,
     log: () => {}
   };
 
