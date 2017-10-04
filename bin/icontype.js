@@ -21,7 +21,8 @@ const argv = minimist(process.argv.slice(2), {
     'template-dest',
     'template',
     'normalize',
-    'height'
+    'height',
+    'centerHorizontally'
   ],
   alias: {
     c: 'class-name',
