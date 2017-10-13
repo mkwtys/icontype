@@ -14,15 +14,15 @@ const argv = minimist(process.argv.slice(2), {
     'start-unicode'
   ],
   string: [
+    'center-horizontally',
     'class-name',
     'font-name',
     'font-path',
+    'height',
+    'normalize',
     'out-dir',
     'template-dest',
-    'template',
-    'normalize',
-    'height',
-    'centerHorizontally'
+    'template'
   ],
   alias: {
     c: 'class-name',
@@ -46,9 +46,12 @@ const argv = minimist(process.argv.slice(2), {
 
 function main() {
   icontype(glob.sync(argv._), {
+    centerHorizontally: argv['center-horizontally']
     className: argv.c,
     fontName: argv.f,
     fontPath: argv.p,
+    height: argv.height,
+    normalize: argv.normalize,
     outDir: argv.o,
     startUnicode: argv.s,
     template: argv.template,
@@ -64,19 +67,19 @@ Usage
   ${Object.keys(pkg.bin)[0]} <svg files> [options]
 
 Options
-  -c, --class-name       base class name for css      [default: icontype]
-  -f, --font-name        font family name             [default: icontype]
-  -p, --font-path        font path for css
-      --height           height option for 'svgicons2svgfont'
-  -h, --help             show help
-      --normalize        normalize option for 'svgicons2svgfont'
-  -o, --out-dir          output directory
-  -s, --start-unicode    start unicode codepoint      [default: 0xEA01]
-      --template         template source (glob)
-      --template-dest    template output directory
-  -v, --version          print version
-`
-  );
+      --center-horizontally    center-horizontally option for 'svgicons2svgfont'
+  -c, --class-name             base class name for css                              [default: icontype]
+  -f, --font-name              font family name                                     [default: icontype]
+  -p, --font-path              font path for css
+      --height                 height option for 'svgicons2svgfont'
+  -h, --help                   show help
+      --normalize              normalize option for 'svgicons2svgfont'
+  -o, --out-dir                output directory
+  -s, --start-unicode          start unicode codepoint                              [default: 0xEA01]
+      --template               template source (glob)
+      --template-dest          template output directory
+  -v, --version                print version
+`);
 }
 
 function showVersion() {
