@@ -4,5 +4,6 @@ node_js:
   - '6'
   - '8'
 dist: trusty
-before_script: npm install codecov
+cache: yarn
+before_script: yarn install codecov
 after_success: nyc report --reporter=lcov > coverage.lcov && codecov
