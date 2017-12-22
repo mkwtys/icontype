@@ -1,7 +1,8 @@
 sudo: false
 language: node_js
 node_js:
-  - '8'
   - '6'
-after_success: nyc report --reporter=lcov > coverage.lcov && codecov
+  - '8'
+dist: trusty
 before_script: npm install codecov
+after_success: nyc report --reporter=lcov > coverage.lcov && codecov
