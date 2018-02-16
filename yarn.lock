@@ -2099,9 +2099,9 @@ svg2ttf@4.1.0:
     svgpath "^2.1.5"
     xmldom "~0.1.22"
 
-svgicons2svgfont@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/svgicons2svgfont/-/svgicons2svgfont-8.0.0.tgz#f1d79a7b7c1fa29065a4135984d0d36b6e0ec5af"
+svgicons2svgfont@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/svgicons2svgfont/-/svgicons2svgfont-9.0.0.tgz#b3831a999c647d04e75b2d758e70286c2c2b0108"
   dependencies:
     commander "^2.12.2"
     geometry-interfaces "^1.1.4"
