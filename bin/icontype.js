@@ -46,7 +46,7 @@ const argv = minimist(process.argv.slice(2), {
 
 function main() {
   icontype(glob.sync(argv._), {
-    centerHorizontally: argv['center-horizontally']
+    centerHorizontally: argv['center-horizontally'],
     className: argv.c,
     fontName: argv.f,
     fontPath: argv.p,
