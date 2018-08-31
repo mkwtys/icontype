@@ -37,7 +37,7 @@
     "bin",
     "lib"
   ],
-  "homepage": "https://github.com/mkwtys/icontype#readme",
+  "homepage": "https://github.com/mkwtys/icontype",
   "keywords": [
     "iconfont",
     "generator",
@@ -51,7 +51,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mkwtys/icontype.git"
+    "url": "https://github.com/mkwtys/icontype.git"
   },
   "scripts": {
     "clean": "rimraf test/dist",
