@@ -1143,10 +1143,6 @@ lodash@^4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
-lodash@^4.6.1:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
-
 longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
@@ -1896,13 +1892,13 @@ svg-pathdata@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/svg-pathdata/-/svg-pathdata-4.0.1.tgz#7d880d05140ef3bda312c72a023db733e9d8ef7a"
 
-svg2ttf@4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/svg2ttf/-/svg2ttf-4.1.0.tgz#82022e568bd03c1abb668fdd8d15f008956a0e10"
+svg2ttf@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/svg2ttf/-/svg2ttf-4.2.0.tgz#131a037701fd5cae80d05b168b7b4db24fcc9d74"
   dependencies:
     argparse "^1.0.6"
     cubic2quad "^1.0.0"
-    lodash "^4.6.1"
+    lodash "^4.17.10"
     microbuffer "^1.0.0"
     svgpath "^2.1.5"
     xmldom "~0.1.22"
