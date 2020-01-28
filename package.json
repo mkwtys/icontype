@@ -28,7 +28,7 @@
     "mocha": "6.2.2",
     "nyc": "14.1.1",
     "power-assert": "1.6.1",
-    "rimraf": "3.0.0"
+    "rimraf": "3.0.1"
   },
   "directories": {
     "test": "test"
