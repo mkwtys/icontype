@@ -15,7 +15,7 @@
   "dependencies": {
     "backtick": "0.3.2",
     "glob-all": "3.1.0",
-    "minimist": "1.2.3",
+    "minimist": "1.2.4",
     "mkdirp": "0.5.1",
     "svg2ttf": "4.3.0",
     "svgicons2svgfont": "9.1.1",
