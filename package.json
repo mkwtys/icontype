@@ -17,7 +17,7 @@
     "glob-all": "3.1.0",
     "minimist": "1.2.5",
     "mkdirp": "0.5.4",
-    "svg2ttf": "4.3.0",
+    "svg2ttf": "5.0.0",
     "svgicons2svgfont": "9.1.1",
     "ttf2eot": "2.0.0",
     "ttf2woff": "2.0.1",
